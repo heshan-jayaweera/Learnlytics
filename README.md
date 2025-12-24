@@ -1,25 +1,23 @@
 # Learnlytics - Student Academic Data Management System
 
-<div style="
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  justify-items: center;
-">
-
-  <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/f937054f00917d4ad1659b900b48df11442602e3/admin1.jpeg"
-       alt="Admin Dashboard 1" width="200" height="200"/>
-
-  <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/29e2a6ec8d9482061e7c49f45f8e403d14205a42/admin2.jpeg"
-       alt="Admin Dashboard 2" width="200" height="200"/>
-
-  <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/affb1a8100595cab4c8d18e70cc75fad49218791/admin3.jpeg"
-       alt="Admin Dashboard 3" width="200" height="200"/>
-
-  <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/0aac05b18932ec33b206e1cd6da0983aa3639fe2/student.jpeg"
-       alt="Student Dashboard" width="200" height="200"/>
-
-</div>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/f937054f00917d4ad1659b900b48df11442602e3/admin1.jpeg" width="200" height="200" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/29e2a6ec8d9482061e7c49f45f8e403d14205a42/admin2.jpeg" width="200" height="200" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/affb1a8100595cab4c8d18e70cc75fad49218791/admin3.jpeg" width="200" height="200" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/0aac05b18932ec33b206e1cd6da0983aa3639fe2/student.jpeg" width="200" height="200" />
+    </td>
+  </tr>
+</table>
 
   <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/0bf25c7d3286c59d78140a3e3d64555f0dbb1351/Screenshot%202025-12-25%20004901.png" alt="Screenshot 5" width="200" height="200"/>
   <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/fe17e6754d9ec02901bfd7c1952a970f0398152c/Screenshot%202025-12-25%20004922.png" alt="Screenshot 6" width="200" height="200"/>

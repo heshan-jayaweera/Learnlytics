@@ -4,7 +4,7 @@
 
   <!-- Row 1 -->
   <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/f937054f00917d4ad1659b900b48df11442602e3/admin1.jpeg" alt="AquaLink Screenshot 1" width="200" height="200"/>
-  <img src="https://github.com/heshan-jayaweera/Aqualink/blob/85cf10a2f98f3002d3fd3fb3a77210c640c4d282/localhost_3000_products.png" alt="AquaLink Screenshot 2" width="200" height="200"/>
+  <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/29e2a6ec8d9482061e7c49f45f8e403d14205a42/admin2.jpeg" alt="AquaLink Screenshot 2" width="200" height="200"/>
   <img src="https://github.com/heshan-jayaweera/Aqualink/blob/25d6398fd92605fe38fce5e43a17bfcd8e8c8b45/localhost_3000_factory-manager%20(3).png" alt="Factory Manager 1" width="200" height="200"/>
   <img src="https://github.com/heshan-jayaweera/Aqualink/blob/25d6398fd92605fe38fce5e43a17bfcd8e8c8b45/localhost_3000_factory-manager.png" alt="Factory Manager 2" width="200" height="200"/>
 

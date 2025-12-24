@@ -6,10 +6,9 @@
   <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/f937054f00917d4ad1659b900b48df11442602e3/admin1.jpeg" alt="AquaLink Screenshot 1" width="200" height="200"/>
   <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/29e2a6ec8d9482061e7c49f45f8e403d14205a42/admin2.jpeg" alt="AquaLink Screenshot 2" width="200" height="200"/>
   <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/affb1a8100595cab4c8d18e70cc75fad49218791/admin3.jpeg" alt="Factory Manager 1" width="200" height="200"/>
-  <img src="https://github.com/heshan-jayaweera/Aqualink/blob/25d6398fd92605fe38fce5e43a17bfcd8e8c8b45/localhost_3000_factory-manager.png" alt="Factory Manager 2" width="200" height="200"/>
 
   <!-- Row 2 -->
-  <img src="https://github.com/heshan-jayaweera/Aqualink/blob/25d6398fd92605fe38fce5e43a17bfcd8e8c8b45/localhost_3000_fire-brigade-dashboard.png" alt="Fire Brigade Dashboard" width="200" height="200"/>
+  <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/2b00c4f8fdce8723ae7e582f44ff557420d6d589/admin4.jpeg" alt="Fire Brigade Dashboard" width="200" height="200"/>
   <img src="https://github.com/heshan-jayaweera/Aqualink/blob/25d6398fd92605fe38fce5e43a17bfcd8e8c8b45/localhost_3000_driver-dashboard.png" alt="Driver Dashboard" width="200" height="200"/>
   <img src="https://github.com/heshan-jayaweera/Aqualink/blob/25d6398fd92605fe38fce5e43a17bfcd8e8c8b45/localhost_3000_branch-manager_inventory.png" alt="Branch Manager Inventory" width="200" height="200"/>
   <img src="https://github.com/heshan-jayaweera/Aqualink/blob/25d6398fd92605fe38fce5e43a17bfcd8e8c8b45/localhost_3000_admin-dashboard.png" alt="Admin Dashboard" width="200" height="200"/>

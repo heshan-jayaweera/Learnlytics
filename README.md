@@ -10,7 +10,7 @@
   <!-- Row 2 -->
   <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/2b00c4f8fdce8723ae7e582f44ff557420d6d589/admin4.jpeg" alt="Fire Brigade Dashboard" width="200" height="200"/>
   <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/0aac05b18932ec33b206e1cd6da0983aa3639fe2/student.jpeg" alt="Driver Dashboard" width="200" height="200"/>
-  <img src="https://github.com/heshan-jayaweera/Aqualink/blob/25d6398fd92605fe38fce5e43a17bfcd8e8c8b45/localhost_3000_branch-manager_inventory.png" alt="Branch Manager Inventory" width="200" height="200"/>
+  <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/0bf25c7d3286c59d78140a3e3d64555f0dbb1351/Screenshot%202025-12-25%20004901.png" alt="Branch Manager Inventory" width="200" height="200"/>
   <img src="https://github.com/heshan-jayaweera/Aqualink/blob/25d6398fd92605fe38fce5e43a17bfcd8e8c8b45/localhost_3000_admin-dashboard.png" alt="Admin Dashboard" width="200" height="200"/>
 
 </div>

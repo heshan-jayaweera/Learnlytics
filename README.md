@@ -3,7 +3,7 @@
 
 A comprehensive system for managing student academic data and analyzing performance using Power BI dashboards.
 
-# Frontend Screenshots of Web App
+- Frontend Screenshots of Web App
 <table align="center">
   <tr>
     <td align="center">
@@ -24,7 +24,7 @@ A comprehensive system for managing student academic data and analyzing performa
 </table>
 
 
-# Power BI Deskotp Screenshots integrated with Dynamic real time data in Mongo DB
+- Power BI Deskotp Screenshots integrated with Dynamic real time data in Mongo DB
  <table align="center">
   <tr>
     <td align="center">

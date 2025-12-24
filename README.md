@@ -1,6 +1,7 @@
 # Learnlytics - Student Academic Data Management System
 
 A comprehensive system for managing student academic data and analyzing performance using Power BI dashboards.
+Can be viewed in Power BI desktop freely by ODBC connector.
 
 ## 🎯 Features
 
@@ -44,7 +45,7 @@ Power BI Reports (Embedded)
 
 - Node.js (v14 or higher)
 - MongoDB (local or Atlas)
-- Power BI Pro/Premium account (for analytics)
+- Power BI Pro/Premium account (for analytics, yet not integrated but can be viewed in power BI desktop )
 - npm or yarn
 
 ## 🚀 Getting Started
@@ -148,34 +149,6 @@ The system uses JWT (JSON Web Tokens) for authentication. Include the token in t
 Authorization: Bearer <your-token>
 ```
 
-## 📊 Power BI Integration
-
-**Having issues connecting to Power BI?** See below for quick fixes.
-
-See [POWER_BI_SETUP.md](./POWER_BI_SETUP.md) for detailed instructions on setting up Power BI embedding.
-
-### Quick Fixes & Guides
-
-| Issue | Solution |
-|-------|----------|
-| "No visible columns" error from MongoDB | 👉 [POWER_BI_QUICK_FIX.md](./POWER_BI_QUICK_FIX.md) |
-| Need step-by-step Power BI setup | 👉 [POWER_BI_STEP_BY_STEP.md](./POWER_BI_STEP_BY_STEP.md) |
-| Want comprehensive technical details | 👉 [POWER_BI_MONGODB_FIX.md](./POWER_BI_MONGODB_FIX.md) |
-| See what was changed | 👉 [POWER_BI_CHANGES.md](./POWER_BI_CHANGES.md) |
-
-### Connecting Power BI
-
-**New: Use API Endpoints (Recommended)**
-- Marks data: `http://localhost:5000/api/marks/export/powerbi`
-- Students data: `http://localhost:5000/api/students/export/powerbi`
-
-This avoids MongoDB connection issues and provides clean, flat data for Power BI.
-
-**Alternative: Direct MongoDB**
-- See [POWER_BI_SETUP.md](./POWER_BI_SETUP.md) step 1
-
-## 🗄️ Database Schema
-
 ### User Model
 - email (unique)
 - password (hashed)
@@ -252,21 +225,5 @@ This avoids MongoDB connection issues and provides clean, flat data for Power BI
 - Check browser console for errors
 - Clear browser cache and localStorage
 
-### Power BI Issues
-- See [POWER_BI_SETUP.md](./POWER_BI_SETUP.md) troubleshooting section
 
-## 📄 License
-
-ISC
-
-## 👥 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📞 Support
-
-For issues and questions, please open an issue on the repository.
 

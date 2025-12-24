@@ -1,5 +1,22 @@
 # Learnlytics - Student Academic Data Management System
 
+<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+
+  <!-- Row 1 -->
+  <img src="https://github.com/heshan-jayaweera/Aqualink/blob/98e6b29609a77631920232a7ee0ea25f5d09d598/localhost_3000_home.png" alt="AquaLink Screenshot 1" width="200" height="200"/>
+  <img src="https://github.com/heshan-jayaweera/Aqualink/blob/85cf10a2f98f3002d3fd3fb3a77210c640c4d282/localhost_3000_products.png" alt="AquaLink Screenshot 2" width="200" height="200"/>
+  <img src="https://github.com/heshan-jayaweera/Aqualink/blob/25d6398fd92605fe38fce5e43a17bfcd8e8c8b45/localhost_3000_factory-manager%20(3).png" alt="Factory Manager 1" width="200" height="200"/>
+  <img src="https://github.com/heshan-jayaweera/Aqualink/blob/25d6398fd92605fe38fce5e43a17bfcd8e8c8b45/localhost_3000_factory-manager.png" alt="Factory Manager 2" width="200" height="200"/>
+
+  <!-- Row 2 -->
+  <img src="https://github.com/heshan-jayaweera/Aqualink/blob/25d6398fd92605fe38fce5e43a17bfcd8e8c8b45/localhost_3000_fire-brigade-dashboard.png" alt="Fire Brigade Dashboard" width="200" height="200"/>
+  <img src="https://github.com/heshan-jayaweera/Aqualink/blob/25d6398fd92605fe38fce5e43a17bfcd8e8c8b45/localhost_3000_driver-dashboard.png" alt="Driver Dashboard" width="200" height="200"/>
+  <img src="https://github.com/heshan-jayaweera/Aqualink/blob/25d6398fd92605fe38fce5e43a17bfcd8e8c8b45/localhost_3000_branch-manager_inventory.png" alt="Branch Manager Inventory" width="200" height="200"/>
+  <img src="https://github.com/heshan-jayaweera/Aqualink/blob/25d6398fd92605fe38fce5e43a17bfcd8e8c8b45/localhost_3000_admin-dashboard.png" alt="Admin Dashboard" width="200" height="200"/>
+
+</div>
+
+
 A comprehensive system for managing student academic data and analyzing performance using Power BI dashboards.
 Can be viewed in Power BI desktop freely by ODBC connector.
 

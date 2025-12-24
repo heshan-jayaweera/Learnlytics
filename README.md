@@ -1,6 +1,6 @@
 # Learnlytics - Student Academic Data Management System
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+<div style="display: flex; flex-wrap: wrap; gap: 50px; justify-content: center;">
 
   <!-- Row 1 -->
   <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/f937054f00917d4ad1659b900b48df11442602e3/admin1.jpeg" alt="AquaLink Screenshot 1" width="200" height="200"/>

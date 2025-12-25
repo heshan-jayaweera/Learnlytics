@@ -1,6 +1,48 @@
 # Learnlytics - Student Academic Data Management System
 
+
 A comprehensive system for managing student academic data and analyzing performance using Power BI dashboards.
+
+- Frontend Screenshots of Web App
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/f937054f00917d4ad1659b900b48df11442602e3/admin1.jpeg" width="200" height="200" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/29e2a6ec8d9482061e7c49f45f8e403d14205a42/admin2.jpeg" width="200" height="200" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/affb1a8100595cab4c8d18e70cc75fad49218791/admin3.jpeg" width="200" height="200" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/0aac05b18932ec33b206e1cd6da0983aa3639fe2/student.jpeg" width="200" height="200" />
+    </td>
+  </tr>
+</table>
+
+
+- Power BI Deskotp Screenshots integrated with Dynamic real time data in Mongo DB
+ <table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/0bf25c7d3286c59d78140a3e3d64555f0dbb1351/Screenshot%202025-12-25%20004901.png"
+           alt="Screenshot 5" width="200" height="200" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/fe17e6754d9ec02901bfd7c1952a970f0398152c/Screenshot%202025-12-25%20004922.png"
+           alt="Screenshot 6" width="200" height="200" />
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+Can be viewed in Power BI desktop freely by ODBC connector.
 
 ## 🎯 Features
 
@@ -44,7 +86,7 @@ Power BI Reports (Embedded)
 
 - Node.js (v14 or higher)
 - MongoDB (local or Atlas)
-- Power BI Pro/Premium account (for analytics)
+- Power BI Pro/Premium account (for analytics, yet not integrated but can be viewed in power BI desktop )
 - npm or yarn
 
 ## 🚀 Getting Started
@@ -148,34 +190,6 @@ The system uses JWT (JSON Web Tokens) for authentication. Include the token in t
 Authorization: Bearer <your-token>
 ```
 
-## 📊 Power BI Integration
-
-**Having issues connecting to Power BI?** See below for quick fixes.
-
-See [POWER_BI_SETUP.md](./POWER_BI_SETUP.md) for detailed instructions on setting up Power BI embedding.
-
-### Quick Fixes & Guides
-
-| Issue | Solution |
-|-------|----------|
-| "No visible columns" error from MongoDB | 👉 [POWER_BI_QUICK_FIX.md](./POWER_BI_QUICK_FIX.md) |
-| Need step-by-step Power BI setup | 👉 [POWER_BI_STEP_BY_STEP.md](./POWER_BI_STEP_BY_STEP.md) |
-| Want comprehensive technical details | 👉 [POWER_BI_MONGODB_FIX.md](./POWER_BI_MONGODB_FIX.md) |
-| See what was changed | 👉 [POWER_BI_CHANGES.md](./POWER_BI_CHANGES.md) |
-
-### Connecting Power BI
-
-**New: Use API Endpoints (Recommended)**
-- Marks data: `http://localhost:5000/api/marks/export/powerbi`
-- Students data: `http://localhost:5000/api/students/export/powerbi`
-
-This avoids MongoDB connection issues and provides clean, flat data for Power BI.
-
-**Alternative: Direct MongoDB**
-- See [POWER_BI_SETUP.md](./POWER_BI_SETUP.md) step 1
-
-## 🗄️ Database Schema
-
 ### User Model
 - email (unique)
 - password (hashed)
@@ -252,21 +266,5 @@ This avoids MongoDB connection issues and provides clean, flat data for Power BI
 - Check browser console for errors
 - Clear browser cache and localStorage
 
-### Power BI Issues
-- See [POWER_BI_SETUP.md](./POWER_BI_SETUP.md) troubleshooting section
 
-## 📄 License
-
-ISC
-
-## 👥 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## 📞 Support
-
-For issues and questions, please open an issue on the repository.
 

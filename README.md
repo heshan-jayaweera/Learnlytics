@@ -32,7 +32,7 @@ A comprehensive system for managing student academic data and analyzing performa
            alt="Screenshot 5" width="200" height="200" />
     </td>
     <td align="center">
-      <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/fe17e6754d9ec02901bfd7c1952a970f0398152c/Screenshot%202025-12-25%20004922.png"
+      <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/0c792b0661d14343e9f9d5ee9dc7f2a85c50ed19/Screenshot%202025-12-25%20212936.png"
            alt="Screenshot 6" width="200" height="200" />
     </td>
   </tr>

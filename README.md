@@ -28,7 +28,7 @@ A comprehensive system for managing student academic data and analyzing performa
  <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/0bf25c7d3286c59d78140a3e3d64555f0dbb1351/Screenshot%202025-12-25%20004901.png"
+      <img src="https://github.com/heshan-jayaweera/Learnlytics/blob/4ac9e7339c54d2ad76aa17ca7248f698314a0ec6/Screenshot%202025-12-25%20212914.png"
            alt="Screenshot 5" width="200" height="200" />
     </td>
     <td align="center">

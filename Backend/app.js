@@ -29,7 +29,7 @@ app.use((err, req, res, next) => {
 });
 
 // Database connection
-const MONGODB_URI = process.env.MONGODB_URI || "****************************";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://lecturer:MKiPSxKCiGSg1PiF@cluster0.cjvhnm4.mongodb.net/learnlytics";
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(MONGODB_URI)

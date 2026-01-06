@@ -114,10 +114,15 @@ const Login = () => {
             </Button>
           </Form>
 
-          <div className="text-center mt-6 pt-6 border-t border-gray-300">
+          <div className="text-center mt-6 pt-6 border-t border-gray-300 space-y-2">
             <Link to="/register" className="text-accent hover:text-accent-light transition-all duration-300 hover:scale-110 inline-flex items-center gap-2 font-medium group">
-              <span className="text-black">Don't have an account?</span>
+              <span className="text-black">Student? Create an account</span>
               <span className="group-hover:translate-x-1 transition-transform duration-300 text-black">Register →</span>
+            </Link>
+            <div className="text-sm text-black">or</div>
+            <Link to="/register-admin" className="text-primary hover:text-primary/80 transition-all duration-300 hover:scale-110 inline-flex items-center gap-2 font-medium group">
+              <span>Admin? Register here</span>
+              <span className="group-hover:translate-x-1 transition-transform duration-300">Register as Admin →</span>
             </Link>
           </div>
         </Card.Body>

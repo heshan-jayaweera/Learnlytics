@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const User = require('./model/User');
 
 const app = express();
 
@@ -40,34 +39,9 @@ app.use((err, req, res, next) => {
 const MongoDB_URI = process.env.MongoDB_URI || process.env.MONGODB_URI;
 const PORT = process.env.PORT || 5000;
 
-// Seed a default admin if none exists
-const seedDefaultAdmin = async () => {
-  const adminEmail = 'heshan@learnlytics.com';
-  const existingAdmin = await User.findOne({ email: adminEmail });
-  if (existingAdmin) {
-    return;
-  }
-
-  const admin = new User({
-    email: adminEmail,
-    password: '1234',
-    role: 'admin',
-    name: 'Heshan'
-  });
-
-  // Bypass minlength validation on the raw password (hashed value will be long)
-  await admin.save({ validateBeforeSave: false });
-  console.log('Seeded default admin user:', adminEmail);
-};
-
 mongoose.connect(MongoDB_URI)
-  .then(async () => {
+  .then(() => {
     console.log('Connected to MongoDB');
-    try {
-      await seedDefaultAdmin();
-    } catch (seedErr) {
-      console.error('Error seeding default admin:', seedErr);
-    }
     app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
     });

@@ -4,6 +4,7 @@ import { AuthProvider } from './context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 import Login from './components/Login';
 import Register from './components/Register';
+import AdminRegister from './components/AdminRegister';
 import AdminDashboard from './components/admin/AdminDashboard';
 import StudentDashboard from './components/student/StudentDashboard';
 import Unauthorized from './components/Unauthorized';
@@ -32,6 +33,7 @@ function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/register-admin" element={<AdminRegister />} />
             <Route
               path="/admin/dashboard"
               element={

@@ -7,16 +7,7 @@ const register = async (req, res) => {
   try {
     const { email, password, role, name, studentId } = req.body;
 
-    // Only allow student registration through public registration endpoint
-    // Admin and lecturer accounts must be created by existing admins
-    if (role && role !== 'student') {
-      return res.status(403).json({ 
-        message: 'Admin and lecturer accounts cannot be created through public registration. Please contact an administrator.' 
-      });
-    }
-
-    // Force role to be student for public registration
-    const userRole = 'student';
+    const userRole = role || 'student';
 
     // Check if user already exists
     const existingUser = await User.findOne({ email });
@@ -24,20 +15,22 @@ const register = async (req, res) => {
       return res.status(400).json({ message: 'User already exists with this email' });
     }
 
-    // Student ID is required for student registration
-    if (!studentId) {
-      return res.status(400).json({ message: 'Student ID is required for student registration' });
-    }
-    
-    const student = await Student.findOne({ studentId });
-    if (!student) {
-      return res.status(400).json({ message: 'Student ID not found. Please contact admin.' });
-    }
-    
-    // Check if studentId already has an account
-    const existingStudentUser = await User.findOne({ studentId });
-    if (existingStudentUser) {
-      return res.status(400).json({ message: 'Account already exists for this student ID' });
+    if (userRole === 'student') {
+      // Student ID is required for student registration
+      if (!studentId) {
+        return res.status(400).json({ message: 'Student ID is required for student registration' });
+      }
+      
+      const student = await Student.findOne({ studentId });
+      if (!student) {
+        return res.status(400).json({ message: 'Student ID not found. Please contact admin.' });
+      }
+      
+      // Check if studentId already has an account
+      const existingStudentUser = await User.findOne({ studentId });
+      if (existingStudentUser) {
+        return res.status(400).json({ message: 'Account already exists for this student ID' });
+      }
     }
 
     // Create new user (only students can register)
@@ -46,7 +39,7 @@ const register = async (req, res) => {
       password,
       role: userRole,
       name,
-      studentId
+      studentId: userRole === 'student' ? studentId : undefined
     });
 
     await user.save();

@@ -9,7 +9,11 @@ import CourseManagement from './CourseManagement';
 
 const AdminDashboard = () => {
   const { user, logout } = useAuth();
-  const [activeTab, setActiveTab] = useState('students');
+  const isAdmin = user?.role === 'admin';
+  const isLecturer = user?.role === 'lecturer';
+
+  // Default tab: admins see students, lecturers see marks
+  const [activeTab, setActiveTab] = useState(isAdmin ? 'students' : 'marks');
 
   return (
     <>
@@ -28,18 +32,20 @@ const AdminDashboard = () => {
         
         <Tab.Container activeKey={activeTab} onSelect={(k) => setActiveTab(k)}>
           <Nav variant="tabs" className="border-b-2 border-primary/30 mb-6 bg-gray-100/50 backdrop-blur-sm rounded-t-lg p-1">
-            <Nav.Item>
-              <Nav.Link 
-                eventKey="students"
-                className={`text-black hover:text-primary transition-all duration-300 border-0 rounded-lg px-4 py-3 font-semibold ${
-                  activeTab === 'students' 
-                    ? 'bg-gradient-to-r from-primary/20 to-primary/10 text-primary border-b-2 border-primary shadow-lg shadow-primary/30 scale-105' 
-                    : 'hover:bg-gray-100/50 hover:scale-105'
-                }`}
-              >
-                👥 Student Management
-              </Nav.Link>
-            </Nav.Item>
+            {isAdmin && (
+              <Nav.Item>
+                <Nav.Link 
+                  eventKey="students"
+                  className={`text-black hover:text-primary transition-all duration-300 border-0 rounded-lg px-4 py-3 font-semibold ${
+                    activeTab === 'students' 
+                      ? 'bg-gradient-to-r from-primary/20 to-primary/10 text-primary border-b-2 border-primary shadow-lg shadow-primary/30 scale-105' 
+                      : 'hover:bg-gray-100/50 hover:scale-105'
+                  }`}
+                >
+                  👥 Student Management
+                </Nav.Link>
+              </Nav.Item>
+            )}
             <Nav.Item>
               <Nav.Link 
                 eventKey="marks"
@@ -52,30 +58,20 @@ const AdminDashboard = () => {
                 📝 Marks Management
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link 
-                eventKey="courses"
-                className={`text-black hover:text-accent transition-all duration-300 border-0 rounded-lg px-4 py-3 font-semibold ${
-                  activeTab === 'courses' 
-                    ? 'bg-gradient-to-r from-accent/20 to-accent/10 text-accent border-b-2 border-accent shadow-lg shadow-accent/30 scale-105' 
-                    : 'hover:bg-gray-100/50 hover:scale-105'
-                }`}
-              >
-                📖 Course Management
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link 
-                eventKey="analytics"
-                className={`text-black hover:text-accent-alt transition-all duration-300 border-0 rounded-lg px-4 py-3 font-semibold ${
-                  activeTab === 'analytics' 
-                    ? 'bg-gradient-to-r from-accent-alt/20 to-accent-alt/10 text-accent-alt border-b-2 border-accent-alt shadow-lg shadow-accent-alt/30 scale-105' 
-                    : 'hover:bg-gray-100/50 hover:scale-105'
-                }`}
-              >
-                📊 Analytics
-              </Nav.Link>
-            </Nav.Item>
+            {isAdmin && (
+              <Nav.Item>
+                <Nav.Link 
+                  eventKey="courses"
+                  className={`text-black hover:text-accent transition-all duration-300 border-0 rounded-lg px-4 py-3 font-semibold ${
+                    activeTab === 'courses' 
+                      ? 'bg-gradient-to-r from-accent/20 to-accent/10 text-accent border-b-2 border-accent shadow-lg shadow-accent/30 scale-105' 
+                      : 'hover:bg-gray-100/50 hover:scale-105'
+                  }`}
+                >
+                  📖 Course Management
+                </Nav.Link>
+              </Nav.Item>
+            )}
           </Nav>
 
           <Tab.Content className="mt-5">

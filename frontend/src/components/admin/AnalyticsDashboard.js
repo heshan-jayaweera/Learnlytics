@@ -48,7 +48,8 @@ const AnalyticsDashboard = () => {
                 <li><strong className="text-white">Power BI Pro/Premium</strong> - Per-user license</li>
               </ul>
               <p className="mb-0 mt-2 text-black">
-                See <code className="text-accent">POWER_BI_OPTIONS.md</code> for details. The Interactive Charts tab works without any Power BI setup!
+                In this project, Power BI is not embedded directly inside the MERN app. Instead, the app's data is exposed through the database (MongoDB Atlas) and can be connected to Power BI using ODBC/connector integration.
+                This allows stakeholders to visualize and analyze live application data in Power BI dashboards.
               </p>
             </div>
             <PowerBIEmbed />

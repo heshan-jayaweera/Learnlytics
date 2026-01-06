@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Nav, Tab } from 'react-bootstrap';
 import AnalyticsDashboardCharts from './AnalyticsDashboardCharts';
-import PowerBIEmbed from '../PowerBIEmbed';
 
 const AnalyticsDashboard = () => {
   const [activeTab, setActiveTab] = useState('charts');
@@ -22,18 +21,6 @@ const AnalyticsDashboard = () => {
               Interactive Charts
             </Nav.Link>
           </Nav.Item>
-          <Nav.Item>
-            <Nav.Link 
-              eventKey="powerbi"
-              className={`text-black hover:text-accent-alt transition-colors duration-200 border-0 ${
-                activeTab === 'powerbi' 
-                  ? 'bg-white text-accent-alt border-b-2 border-accent-alt' 
-                  : 'hover:bg-white/50'
-              }`}
-            >
-              Power BI (Optional)
-            </Nav.Link>
-          </Nav.Item>
         </Nav>
 
         <Tab.Content>
@@ -52,13 +39,4 @@ const AnalyticsDashboard = () => {
                 This allows stakeholders to visualize and analyze live application data in Power BI dashboards.
               </p>
             </div>
-            <PowerBIEmbed />
-          </Tab.Pane>
-        </Tab.Content>
-      </Tab.Container>
-    </div>
-  );
-};
-
-export default AnalyticsDashboard;
-
+        

@@ -36,8 +36,8 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'Something went wrong!', error: err.message });
 });
 
-// Database connection
-const MongoDB_URI = process.env.MongoDB_URI;
+// Database connection (support both MongoDB_URI and MONGODB_URI env names)
+const MongoDB_URI = process.env.MongoDB_URI || process.env.MONGODB_URI;
 const PORT = process.env.PORT || 5000;
 
 // Seed a default admin if none exists

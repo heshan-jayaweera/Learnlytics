@@ -36,10 +36,10 @@ app.use((err, req, res, next) => {
 });
 
 // Database connection
-const MONGODB_URI = process.env.MongoDB_URI;
+const MongoDB_URI = process.env.MongoDB_URI;
 const PORT = process.env.PORT || 5000;
 
-mongoose.connect(MONGODB_URI)
+mongoose.connect(MongoDB_URI)
   .then(() => {
     console.log('Connected to MongoDB');
     app.listen(PORT, () => {

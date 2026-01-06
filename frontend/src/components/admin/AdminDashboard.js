@@ -72,6 +72,18 @@ const AdminDashboard = () => {
                 </Nav.Link>
               </Nav.Item>
             )}
+            <Nav.Item>
+              <Nav.Link 
+                eventKey="analytics"
+                className={`text-black hover:text-accent-alt transition-all duration-300 border-0 rounded-lg px-4 py-3 font-semibold ${
+                  activeTab === 'analytics' 
+                    ? 'bg-gradient-to-r from-accent-alt/20 to-accent-alt/10 text-accent-alt border-b-2 border-accent-alt shadow-lg shadow-accent-alt/30 scale-105' 
+                    : 'hover:bg-gray-100/50 hover:scale-105'
+                }`}
+              >
+                📊 Analytics
+              </Nav.Link>
+            </Nav.Item>
           </Nav>
 
           <Tab.Content className="mt-5">

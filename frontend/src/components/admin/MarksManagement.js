@@ -7,6 +7,7 @@ const MarksManagement = () => {
   const [marks, setMarks] = useState([]);
   const [students, setStudents] = useState([]);
   const [courses, setCourses] = useState([]);
+  const [filteredCourses, setFilteredCourses] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [editingMark, setEditingMark] = useState(null);
@@ -58,16 +59,49 @@ const MarksManagement = () => {
       // Filter only active courses
       const activeCourses = response.data.filter(course => course.isActive !== false);
       setCourses(activeCourses);
+      // Initially show all courses until a student is selected
+      setFilteredCourses(activeCourses);
     } catch (error) {
       console.error('Failed to fetch courses');
     }
   };
 
   const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    
+    // If student is being selected, filter courses to only show their registered modules
+    if (name === 'studentId') {
+      const selectedStudent = students.find(s => s.studentId === value);
+      if (selectedStudent && selectedStudent.course) {
+        // Get student's registered course codes
+        const studentCourseCodes = Array.isArray(selectedStudent.course) 
+          ? selectedStudent.course 
+          : [selectedStudent.course];
+        
+        // Filter courses to only include student's registered courses
+        const studentCourses = courses.filter(c => 
+          studentCourseCodes.includes(c.code) || studentCourseCodes.includes(c.name)
+        );
+        setFilteredCourses(studentCourses);
+      } else {
+        // If no student selected, show all courses
+        setFilteredCourses(courses);
+      }
+      
+      // Reset course selection when student changes
+      setFormData({
+        ...formData,
+        studentId: value,
+        courseCode: '',
+        course: '',
+        subject: '',
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   const handleCourseChange = (e) => {
@@ -97,6 +131,8 @@ const MarksManagement = () => {
       totalMarks: '',
       remarks: '',
     });
+    // Reset to show all courses when adding new mark
+    setFilteredCourses(courses);
     setShowModal(true);
   };
 
@@ -114,6 +150,22 @@ const MarksManagement = () => {
       totalMarks: mark.totalMarks,
       remarks: mark.remarks || '',
     });
+    
+    // Filter courses for the student when editing
+    const selectedStudent = students.find(s => s.studentId === mark.studentId);
+    if (selectedStudent && selectedStudent.course) {
+      const studentCourseCodes = Array.isArray(selectedStudent.course) 
+        ? selectedStudent.course 
+        : [selectedStudent.course];
+      
+      const studentCourses = courses.filter(c => 
+        studentCourseCodes.includes(c.code) || studentCourseCodes.includes(c.name)
+      );
+      setFilteredCourses(studentCourses);
+    } else {
+      setFilteredCourses(courses);
+    }
+    
     setShowModal(true);
   };
 
@@ -258,7 +310,11 @@ const MarksManagement = () => {
         </div>
       )}
 
-      <Modal show={showModal} onHide={() => setShowModal(false)} size="lg">
+      <Modal show={showModal} onHide={() => {
+        setShowModal(false);
+        // Reset filtered courses when modal closes
+        setFilteredCourses(courses);
+      }} size="lg">
         <Modal.Header closeButton>
           <Modal.Title className="text-black">{editingMark ? 'Edit Marks' : 'Add Marks'}</Modal.Title>
         </Modal.Header>
@@ -287,15 +343,17 @@ const MarksManagement = () => {
                 <Form.Group className="mb-3">
                   <Form.Label>Course</Form.Label>
                   <SearchableCourseDropdown
-                    courses={courses}
+                    courses={formData.studentId ? filteredCourses : courses}
                     value={formData.courseCode}
                     onChange={handleCourseChange}
                     name="courseCode"
                     required
-                    disabled={!!editingMark}
+                    disabled={!!editingMark || !formData.studentId}
                   />
                   <Form.Text className="text-muted">
-                    Subject will be automatically set to the course name
+                    {formData.studentId 
+                      ? 'Only showing courses registered for this student'
+                      : 'Select a student first to see their registered courses'}
                   </Form.Text>
                 </Form.Group>
               </div>

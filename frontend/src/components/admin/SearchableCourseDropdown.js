@@ -125,18 +125,20 @@ const SearchableCourseDropdown = ({ courses, value, onChange, name, required, di
                 key={course._id || course.code}
                 action
                 onClick={() => handleCourseSelect(course)}
+                className="course-dropdown-item"
                 style={{
                   cursor: 'pointer',
                   padding: '0.75rem 1rem',
                   backgroundColor: '#ffffff',
                   color: '#000000',
-                  borderColor: '#475569'
+                  borderColor: '#e2e8f0',
+                  transition: 'background-color 0.2s ease'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#1e293b';
+                  e.currentTarget.style.backgroundColor = '#f1f5f9';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = '#334155';
+                  e.currentTarget.style.backgroundColor = '#ffffff';
                 }}
               >
                 <div>

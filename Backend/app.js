@@ -6,7 +6,14 @@ const cors = require('cors');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -29,7 +36,7 @@ app.use((err, req, res, next) => {
 });
 
 // Database connection
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://lecturer:MKiPSxKCiGSg1PiF@cluster0.cjvhnm4.mongodb.net/learnlytics";
+const MONGODB_URI = process.env.MongoDB_URI;
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(MONGODB_URI)

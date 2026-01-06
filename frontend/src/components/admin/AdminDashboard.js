@@ -25,7 +25,7 @@ const AdminDashboard = () => {
         
         <div className="mb-8 relative">
           <h2 className="text-black text-4xl font-extrabold bg-gradient-to-r from-primary via-secondary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-            Admin Dashboard
+            Lecturer Dashboard
           </h2>
           <div className="absolute -bottom-2 left-0 w-40 h-1 bg-gradient-to-r from-primary via-accent to-secondary rounded-full"></div>
         </div>

@@ -27,16 +27,10 @@ const AnalyticsDashboard = () => {
           <Tab.Pane eventKey="charts">
             <AnalyticsDashboardCharts />
           </Tab.Pane>
-          <Tab.Pane eventKey="powerbi">
-            <div className="alert alert-info bg-accent/20 border-accent/50 text-accent">
-              <strong className="text-accent">Power BI Setup:</strong> <span className="text-black">To use Power BI embedding, you need either:</span>
-              <ul className="mb-0 mt-2 text-black">
-                <li><strong className="text-white">Power BI Embedded (Azure)</strong> - Pay-as-you-go, no Pro license needed (Recommended)</li>
-                <li><strong className="text-white">Power BI Pro/Premium</strong> - Per-user license</li>
-              </ul>
-              <p className="mb-0 mt-2 text-black">
-                In this project, Power BI is not embedded directly inside the MERN app. Instead, the app's data is exposed through the database (MongoDB Atlas) and can be connected to Power BI using ODBC/connector integration.
-                This allows stakeholders to visualize and analyze live application data in Power BI dashboards.
-              </p>
-            </div>
-        
+        </Tab.Content>
+      </Tab.Container>
+    </div>
+  );
+};
+
+export default AnalyticsDashboard;

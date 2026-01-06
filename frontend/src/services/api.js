@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 //const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
-const API_URL = process.env.REACT_APP_API_URL || 'https://learnlyticsbe.vercel.app';
+// Point to the deployed backend + /api prefix so route paths line up
+const API_URL = process.env.REACT_APP_API_URL || 'https://learnlyticsbe.vercel.app/api';
 
 // Create axios instance
 const api = axios.create({
